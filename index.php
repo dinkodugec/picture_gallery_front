@@ -4,7 +4,7 @@
 
  $page = !empty($_GET['page']) ? (int)$_GET['page'] : 1;
 
- $items_per_page = 2;
+ $items_per_page = 4;
 
  $items_total_count=Photo::count_all(); 
 
@@ -33,6 +33,28 @@ $photos = Photo::find_by_query($sql);
        </div>
      <?php   endforeach; ?>
  </div>
+
+  <div class="row">
+      <ul class="pager">
+
+      <?php
+          if($paginate->page_total() > 1){
+           
+            if($paginate->has_next()){
+                echo  "<li class='next'><a href=''>Next</a></li>";
+            }
+
+
+
+          }
+
+          ?>
+
+          <!-- <li class="next"><a href=''>Next</a></li> -->
+          <li class="previous"><a href=''>Previous</a></li>
+      </ul>
+  </div>
+
 </div>
 
 </div>
