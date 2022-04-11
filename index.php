@@ -41,7 +41,7 @@ $photos = Photo::find_by_query($sql);
           if($paginate->page_total() > 1){
            
             if($paginate->has_next()){
-                echo  "<li class='next'><a href=''>Next</a></li>";
+                echo  "<li class='next'><a href='index.php?page={$paginate->next()}'>Next</a></li>";
             }
 
 
@@ -51,7 +51,7 @@ $photos = Photo::find_by_query($sql);
           ?>
 
           <!-- <li class="next"><a href=''>Next</a></li> -->
-          <li class="previous"><a href=''>Previous</a></li>
+          <!-- <li class="previous"><a href=''>Previous</a></li> -->
       </ul>
   </div>
 
