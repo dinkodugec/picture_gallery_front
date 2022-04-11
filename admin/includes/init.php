@@ -18,6 +18,7 @@ require_once("user.php");
 require_once("comment.php"); 
 require_once("photo.php");
 require_once("session.php");
+require_once("paginate.php");
 
 /* includes giv us warning not failure like require_once, require_once is more secure*/
 
