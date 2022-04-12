@@ -35,7 +35,7 @@ $photos = Photo::find_by_query($sql);
  </div>
 
   <div class="row">
-      <ul class="pager">
+      <ul class="pager">  <!-- <ul class="pagination"> it can be in this way -->
 
       <?php
           if($paginate->page_total() > 1){
