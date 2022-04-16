@@ -15,7 +15,7 @@ class Session
         session_start();
         $this->visitor_count();
         $this->check_the_login(); /*  start every time when app start */
-        $this->check_message();
+     /*    $this->check_message(); */
     }
 
     public function visitor_count()
@@ -27,7 +27,7 @@ class Session
         }
     }
 
-    private function check_message()
+   /*  private function check_message()
     {
         if(isset($_SESSION['message'])){
             $this->messsage = $_SESSION['message'];
@@ -37,17 +37,17 @@ class Session
         }
 
 
-    }
+    } */
 
  
-     public function message()
+    /*  public function message($msg="")
      {
          if(!empty($msg)){
              $_SESSION['message'] = $msg;
          }else{
              return $this->message();
          }
-     }
+     } */
 
 
 
@@ -91,3 +91,5 @@ class Session
 }
 
 $session = new Session();
+
+/* $message = $session->message(); */

@@ -23,13 +23,21 @@ if(isset($_POST['update'])){
          $user->password =$_POST['password'];
         
          if(empty($_FILES['user_image'])){
+          
             $user->save();
+            redirect("users.php");
+            $session->message("The User has been updated");
+
+
          }else{
+
           $user->set_file($_FILES['user_image']);
           $user->upload_photo();
           $user->save();
+          $session->message("The User has been updated");
 
-          redirect("edit_user.php?id={$user->id}");
+          // redirect("edit_user.php?id={$user->id}");
+          redirect("users.php");
          }
         
          
@@ -109,7 +117,7 @@ if(isset($_POST['update'])){
                                  <input type="password" name="password" class="form-control" value="<?php $user->password;?>">
                                </div>
 
-                               <a class="btn btn-danger" href="delete_user.php?id=<?php echo $user->id; ?>">Delete</a>
+                               <a id="user-id" class="btn btn-danger" href="delete_user.php?id=<?php echo $user->id; ?>">Delete</a>
 
                                <div class="form-group">
                                  <input type="submit" name="update" class="btn btn-primary pull-right" value="Update">
