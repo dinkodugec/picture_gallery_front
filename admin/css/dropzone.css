@@ -474,3 +474,11 @@
   border-right: 6px solid transparent;
   border-bottom: 6px solid #be2626;
 }
+
+/* *******custom stiles***** */
+.dropzone {
+  border: 6px dashed #0087f7;
+  border-radius: 5px;
+  background: white;
+  margin-top: 30px;
+}
