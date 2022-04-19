@@ -48,6 +48,12 @@ $(document).ready(function () {
     // alert(image_name);  it works here without ajax
   });
 
+  /*  ******Delete Event****** */
+
+  $(".delete_link").click(function () {
+    return confirm("Are you sure you want to delete this item");
+  });
+
   tinymce.init({ selector: "textarea" });
 });
 

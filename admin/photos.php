@@ -55,7 +55,7 @@ $photos = Photo::find_all(); /* this will return array of objects */
                                            <td><img class="admin-photo-thumbnail" src="<?php echo $photo->picture_path(); ?>" alt="">
                                             
                                            <div class="actions_links">
-                                                <a href="delete_photo.php?id=<?php echo $photo->id;?>">Delete</a>
+                                                <a class="delete_link" href="delete_photo.php?id=<?php echo $photo->id;?>">Delete</a>
                                                 <a href="edit_photo.php?id=<?php echo $photo->id;?>">Edit</a>
                                                 <a href="../photo.php?id=<?php echo $photo->id; ?>">View</a>
                                             </div>
